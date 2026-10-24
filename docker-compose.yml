@@ -1,0 +1,17 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: moldbusters
+      POSTGRES_PASSWORD: moldbusters_dev_only
+      POSTGRES_DB: moldbusters
+    ports:
+      - "54329:5432"
+    volumes:
+      - mb_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U moldbusters"]
+      interval: 3s
+      retries: 20
+volumes:
+  mb_pgdata:

@@ -1,0 +1,81 @@
+/*
+ * Mold Busters design tokens (PLAN §0.7, §3).
+ * Brand values are APPROXIMATE (from bustmold.com reference), validate against official brand assets.
+ * Contrast: white on --mb-orange ≈ 5.5:1, --mb-teal on white ≈ 12:1, --mb-charcoal on --mb-mint ≈ 13:1.
+ */
+:root {
+  /* Brand */
+  --mb-orange: #de3d0b;
+  --mb-orange-hover: #c13409;
+  --mb-orange-soft: #fde9e2;
+  --mb-teal: #17383b;
+  --mb-teal-700: #24555a;
+  --mb-teal-100: #d5e6e4;
+  --mb-mint: #eaf7f5;
+  --mb-charcoal: #282828;
+  --mb-white: #ffffff;
+
+  /* Semantic */
+  --color-bg: var(--mb-white);
+  --color-bg-subtle: #f6faf9;
+  --color-surface: var(--mb-white);
+  --color-surface-tint: var(--mb-mint);
+  --color-text: var(--mb-charcoal);
+  --color-text-muted: #545b5c;
+  --color-heading: var(--mb-teal);
+  --color-border: #d6e0df;
+  --color-border-strong: #a9bab8;
+  --color-primary: var(--mb-orange);
+  --color-primary-hover: var(--mb-orange-hover);
+  --color-on-primary: var(--mb-white);
+  --color-focus: #1767c2;
+
+  /* Status (calm, not alarming) */
+  --color-info-bg: #e8f1fb;
+  --color-info-fg: #184a7a;
+  --color-success-bg: #e5f4ea;
+  --color-success-fg: #1d5b33;
+  --color-warning-bg: #fff4dc;
+  --color-warning-fg: #6b4a00;
+  --color-danger-bg: #fbe9e7;
+  --color-danger-fg: #8a2414;
+  --color-neutral-bg: #eef1f1;
+  --color-neutral-fg: #3d4545;
+
+  /* Typography */
+  --font-sans: "Rubik", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, "Cascadia Mono", Menlo, Consolas, monospace;
+  --text-xs: 0.8125rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.375rem;
+  --text-2xl: 1.75rem;
+  --text-3xl: clamp(2rem, 1.4rem + 2.6vw, 3rem);
+  --leading-tight: 1.2;
+  --leading-normal: 1.55;
+
+  /* Spacing (4px base) */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+
+  /* Shape & depth */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+  --shadow-sm: 0 1px 2px rgb(23 56 59 / 0.08);
+  --shadow-md: 0 4px 16px rgb(23 56 59 / 0.1);
+
+  /* Layout */
+  --target-min: 44px;
+  --content-max: 72rem;
+  --form-max: 40rem;
+  --sidebar-w: 15rem;
+}

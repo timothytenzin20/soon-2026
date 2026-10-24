@@ -1,0 +1,41 @@
+{
+  "name": "mold-busters-screening",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "packageManager": "pnpm@10.33.4",
+  "engines": {
+    "node": ">=20.12"
+  },
+  "scripts": {
+    "dev": "pnpm --parallel --filter @mb/web --filter @mb/worker dev",
+    "dev:web": "pnpm --filter @mb/web dev",
+    "dev:worker": "pnpm --filter @mb/worker dev",
+    "build": "pnpm --filter @mb/web build",
+    "db:up": "docker compose up -d postgres",
+    "db:generate": "pnpm --filter @mb/db generate",
+    "db:migrate": "pnpm --filter @mb/db migrate",
+    "db:seed": "tsx scripts/seed.ts",
+    "demo:sample": "tsx scripts/run-sample-case.ts",
+    "typecheck": "tsc -b tsconfig.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "pnpm --filter @mb/web lint",
+    "ai:check": "tsx scripts/ai-check.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.0",
+    "playwright": "1.49.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  },
+  "dependencies": {
+    "@mb/ai": "workspace:*",
+    "@mb/db": "workspace:*",
+    "@mb/domain": "workspace:*",
+    "@mb/pipeline": "workspace:*",
+    "@mb/storage": "workspace:*",
+    "drizzle-orm": "^0.38.4"
+  }
+}
